@@ -105,17 +105,18 @@ class CalculatorTest {
     }
 
     @Test
-    @DisplayName("should allow repeated equals input")
-    void testRepeatedEquals() {
+    @DisplayName("should only clear screen on hitting pressClearKey once")
+    void testClearKey() {
         Calculator calc = new Calculator();
 
         calc.pressDigitKey(1);
         calc.pressBinaryOperationKey("+");
         calc.pressDigitKey(4);
-        calc.pressEqualsKey();
+        calc.pressClearKey();
+        calc.pressDigitKey(3);
         calc.pressEqualsKey();
 
-        String expected = "9";
+        String expected = "4";
         String actual = calc.readScreen();
 
         assertEquals(expected, actual);
