@@ -109,14 +109,14 @@ class CalculatorTest {
     void testClearKey() {
         Calculator calc = new Calculator();
 
-        calc.pressDigitKey(1);
+        calc.pressDigitKey(2);
         calc.pressBinaryOperationKey("+");
-        calc.pressDigitKey(4);
+        calc.pressDigitKey(5);
         calc.pressClearKey();
-        calc.pressDigitKey(3);
+        calc.pressDigitKey(6);
         calc.pressEqualsKey();
 
-        String expected = "4";
+        String expected = "8";
         String actual = calc.readScreen();
 
         assertEquals(expected, actual);

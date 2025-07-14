@@ -99,6 +99,7 @@ public class Calculator {
      * Seite hinzu und aktualisiert den Bildschirm. Daraufhin eingegebene Zahlen werden rechts vom
      * Trennzeichen angegeben und daher als Dezimalziffern interpretiert.
      * Beim zweimaligem Drücken, oder wenn bereits ein Trennzeichen angezeigt wird, passiert nichts.
+     *
      */
     public void pressDotKey() {
         if(!screen.contains(".")) screen = screen + ".";
